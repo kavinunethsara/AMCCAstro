@@ -1,0 +1,271 @@
+@import 'stars.css';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  background: linear-gradient(140deg, #460000, 30%, black);
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+page {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 2ch;
+  padding-left: 4ch;
+  padding-right: 4ch;
+  color: hsla(100, 100%, 100%, 0.88);
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100vh;
+  position: relative;
+}
+.hero h1 {
+  display: flex;
+  font-size: 4rem;
+  margin: 0.5rem;
+}
+.hero h2 {
+  margin: 0.5rem;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.hero img {
+  display: flex;
+  height: 20ch;
+  filter: invert(100%);
+}
+.hero::after {
+  display: box;
+  content: "";
+  position: fixed;
+  bottom: 3ch;
+  width: 2ch;
+  height: 2ch;
+  background-color: transparent;
+  border: 0.75ch solid #FFFFFF;
+  border-bottom-left-radius: 1ch;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  transform: rotateZ(-45deg);
+  animation: bounce 1s ease-in infinite, hide 10s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    bottom: 3ch;
+  }
+  50% {
+    bottom: 2ch;
+  }
+  100% {
+    bottom: 3ch;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 0.65;
+  }
+  40% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.65;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav a:hover, nav a.active {
+  font-weight: bold;
+}
+nav a.active {
+  border-color: #e67702;
+}
+nav a {
+  display: flex;
+  color: #e67702;
+  text-decoration: none;
+  padding: 2ch;
+  margin: 1ch;
+  margin-right: -1ch;
+  margin-bottom: 3ch;
+  border-bottom: 4px solid transparent;
+  transform: rotateZ(-90deg);
+}
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 50% 50%;
+  gap: 2ch;
+  padding: 2ch;
+  padding-left: 0ch;
+  padding-right: 0ch;
+  margin-bottom: 2ch;
+}
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .grid .nes {
+    display: none !important;
+  }
+}
+.grid .card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 3px;
+  padding: 3ch;
+}
+.grid .row1 {
+  grid-row: 1;
+}
+.grid .spanrow1 {
+  grid-row: 1/2;
+}
+.grid .row2 {
+  grid-row: 2;
+}
+.grid .spanrow2 {
+  grid-row: 1/3;
+}
+.grid .row3 {
+  grid-row: 3;
+}
+.grid .spanrow3 {
+  grid-row: 1/4;
+}
+.grid .row4 {
+  grid-row: 4;
+}
+.grid .spanrow4 {
+  grid-row: 1/5;
+}
+.grid .row5 {
+  grid-row: 5;
+}
+.grid .spanrow5 {
+  grid-row: 1/6;
+}
+.grid .row6 {
+  grid-row: 6;
+}
+.grid .spanrow6 {
+  grid-row: 1/7;
+}
+.grid .row7 {
+  grid-row: 7;
+}
+.grid .spanrow7 {
+  grid-row: 1/8;
+}
+.grid .row8 {
+  grid-row: 8;
+}
+.grid .spanrow8 {
+  grid-row: 1/9;
+}
+.grid .row9 {
+  grid-row: 9;
+}
+.grid .spanrow9 {
+  grid-row: 1/10;
+}
+.grid .row10 {
+  grid-row: 10;
+}
+.grid .spanrow10 {
+  grid-row: 1/11;
+}
+
+.slides {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+  flex-grow: 0;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+.slides .slide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+.slides::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

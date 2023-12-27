@@ -1,0 +1,39 @@
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50% 50%;
+    gap: 2ch;
+    padding: 2ch;
+    padding-left: 0ch;
+    padding-right: 0ch;
+    margin-bottom: 2ch;
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        .nes {
+            display: none !important;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 3px;
+        padding: 3ch;
+    }
+
+    @for $i from 1 through 10 {
+    .row#{$i}{
+        grid-row: $i;
+    }
+    .spanrow#{$i}{
+        grid-row: 1 / #{1+$i};
+    }
+    }
+}

@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav a:hover, nav a.active {
+  font-weight: bold;
+}
+nav a.active {
+  border-color: #e67702;
+}
+nav a {
+  display: flex;
+  color: #e67702;
+  text-decoration: none;
+  padding: 2ch;
+  margin: 1ch;
+  margin-right: -1ch;
+  margin-bottom: 3ch;
+  border-bottom: 4px solid transparent;
+  transform: rotateZ(-90deg);
+}
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=nav.css.map */

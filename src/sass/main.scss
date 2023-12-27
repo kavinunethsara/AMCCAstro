@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    background: linear-gradient(140deg, #460000, 30%, black);
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+page {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 2ch;
+    padding-left: 4ch;
+    padding-right: 4ch;
+    color: hsla(100%, 100%, 100%, 88%)
+}
+
+@import 'stars.css';
+@import 'typography.scss';
+@import 'hero.scss';
+@import 'nav.scss';
+@import 'cardgrid.scss';
+@import 'slides.scss';
