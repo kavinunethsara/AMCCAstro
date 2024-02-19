@@ -47,13 +47,43 @@ page {
   color: hsla(100, 100%, 100%, 0.88);
 }
 
+@font-face {
+  font-family: "Orbitron";
+  src: url(../../static/fonts/Orbitron/Orbitron.ttf);
+}
 body {
-  font-family: helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: "Orbitron", helvetica, sans-serif;
+  font-size: 0.9rem;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+}
+
+p a {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  position: relative;
+}
+p a::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  border-bottom: 0.2ch solid #ffd000;
+  content: "";
+  transition: 0.25s ease-out;
+}
+p a:hover {
+  color: #ffd000;
+  border: 0px;
+}
+p a:hover::after {
+  width: 100%;
+  left: 0%;
 }
 
 .hero {
@@ -68,7 +98,7 @@ h1 {
 }
 .hero h1 {
   display: flex;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0.5rem;
 }
 .hero h2 {
@@ -94,6 +124,11 @@ h1 {
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-45deg);
   animation: bounce 1s ease-in infinite, hide 10s linear infinite;
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    text-align: center;
+  }
 }
 @keyframes bounce {
   0% {
@@ -180,6 +215,24 @@ nav a {
   background-color: white;
   border-radius: 3px;
   padding: 3ch;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease-out;
+}
+.grid .card label {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, black);
+  padding: 1ch;
+  padding-top: 100%;
+}
+.grid .card:hover {
+  transform: scale(105%);
+  z-index: 100;
+  box-shadow: 0 0 10ch solid white;
 }
 .grid .row1 {
   grid-row: 1;
@@ -242,6 +295,57 @@ nav a {
   grid-row: 1/11;
 }
 
+.thumbnail-grid {
+  display: flex;
+  flex-grow: 0;
+  margin: auto;
+  flex-direction: row;
+}
+.thumbnail-grid .thumbnail {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1ch;
+  margin: 1ch;
+  height: 25ch;
+  width: 25ch;
+}
+.thumbnail-grid .viewmore {
+  display: flex;
+  position: absolute;
+  content: "View More";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  background-color: maroon;
+  background: radial-gradient(circle at 100%, orange, 20%, transparent, 80%, transparent);
+  z-index: 1;
+  justify-content: right;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  padding: 2ch;
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .thumbnail-grid {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+  .thumbnail-grid .thumbnail {
+    flex-grow: 1;
+  }
+  .thumbnail-grid::after {
+    left: 0;
+    justify-content: center;
+    align-items: end;
+    background: radial-gradient(circle at 50% 100%, orange, 20%, transparent, 80%, transparent);
+  }
+}
+
 .slides {
   display: flex;
   flex-grow: 1;
@@ -250,7 +354,7 @@ nav a {
   height: 100vh;
   width: 100%;
   flex-grow: 0;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 .slides .slide {
@@ -260,7 +364,6 @@ nav a {
   height: 100vh;
   overflow: hidden;
   flex-shrink: 0;
-  scroll-snap-align: start;
   position: relative;
 }
 .slides::-webkit-scrollbar {

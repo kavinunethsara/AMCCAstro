@@ -1,12 +1,10 @@
-import anime from './anime.es.js'
+import anime from './anime.es.js';
 import { ScrollAnimator } from './animations.js';
-
-var grids: NodeListOf<Element> = document.querySelectorAll(".grid");
-var animator: ScrollAnimator = new ScrollAnimator([]);
-
+var grids = document.querySelectorAll(".grid");
+var animator = new ScrollAnimator([]);
 for (var i = 0; i < grids.length; i++) {
-    var grid: Element = grids[i];
-    var anim: any = anime({
+    var grid = grids[i];
+    var anim = anime({
         targets: '#' + grid.id + ' .card',
         margin: ['10ch', 0],
         easing: 'easeInOutSine',
@@ -17,6 +15,7 @@ for (var i = 0; i < grids.length; i++) {
     });
     anim.grid = grid;
     animator.animations.push(anim);
-
-    animator.init()
-};
+    animator.init();
+}
+;
+//# sourceMappingURL=main.js.map

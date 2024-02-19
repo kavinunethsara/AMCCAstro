@@ -8,7 +8,7 @@
     height: 100vh;
     position: relative;
 
-    h1{ display: flex; font-size: 4rem; margin: 0.5rem;}
+    h1{ display: flex; font-size: 3rem; margin: 0.5rem;}
     h2 {margin: 0.5rem; font-weight: normal; font-size: 2rem;}
     img{ display: flex; height: 20ch; filter: invert(100%); }
 
@@ -25,6 +25,10 @@
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
         transform: rotateZ(-45deg);
         animation: bounce 1s ease-in infinite, hide 10s linear infinite;
+    }
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
     }
 
     @keyframes bounce {

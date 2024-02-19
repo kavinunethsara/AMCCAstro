@@ -26,6 +26,24 @@
   background-color: white;
   border-radius: 3px;
   padding: 3ch;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease-out;
+}
+.grid .card label {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, black);
+  padding: 1ch;
+  padding-top: 100%;
+}
+.grid .card:hover {
+  transform: scale(105%);
+  z-index: 100;
+  box-shadow: 0 0 10ch solid white;
 }
 .grid .row1 {
   grid-row: 1;
