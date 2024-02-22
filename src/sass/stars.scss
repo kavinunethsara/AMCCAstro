@@ -144,6 +144,8 @@ $shadows-big:    multiple-box-shadow(100);
     mouse-event: none;
     animation: 1s infinite alternate blink;
 
+    transition: 1s ease-out;
+
     &.show {
         opacity: 1;
     }
@@ -155,8 +157,6 @@ $shadows-big:    multiple-box-shadow(100);
             opacity: 0;
         }
     }
-
-    transition: 1s ease-out;
 }
 
 // Adds random points that appear when the mouse point is near

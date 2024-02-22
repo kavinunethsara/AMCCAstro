@@ -25,6 +25,11 @@ main {
   flex-grow: 1;
 }
 
+@media screen and (max-width: 600px) {
+  .desktop {
+    visibility: hidden;
+  }
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -45,6 +50,12 @@ page {
   padding-left: 4ch;
   padding-right: 4ch;
   color: hsla(100, 100%, 100%, 0.88);
+}
+@media screen and (max-width: 600px) {
+  page {
+    padding-left: 1ch;
+    padding-right: 1ch;
+  }
 }
 
 @font-face {
@@ -100,11 +111,16 @@ p a:hover::after {
   display: flex;
   font-size: 3rem;
   margin: 0.5rem;
+  word-wrap: break-word;
 }
 .hero h2 {
   margin: 0.5rem;
   font-weight: normal;
   font-size: 2rem;
+  word-wrap: break-word;
+}
+.hero h3 {
+  word-wrap: break-word;
 }
 .hero img {
   display: flex;
@@ -128,6 +144,15 @@ p a:hover::after {
 @media screen and (max-width: 600px) {
   .hero {
     text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero h3 {
+    font-size: 0.9rem;
   }
 }
 @keyframes bounce {
@@ -214,6 +239,8 @@ nav a {
     border-width: 0;
     margin-right: 0;
     margin-bottom: 1ch;
+    text-orientation: unset;
+    writing-mode: unset;
   }
 }
 
@@ -272,6 +299,11 @@ mobilenav {
   transition: 0.25s ease-out;
   text-decoration: none !important;
   color: inherit !important;
+}
+@media screen and (max-width: 600px) {
+  .grid .card {
+    min-height: 50%;
+  }
 }
 .grid .card label {
   display: block;
@@ -372,6 +404,7 @@ mobilenav {
   flex-grow: 0;
   margin: auto;
   flex-direction: row;
+  width: 100%;
 }
 .thumbnail-grid .thumbnail {
   display: flex;
@@ -405,10 +438,12 @@ mobilenav {
   .thumbnail-grid {
     flex-direction: column;
     margin: 0;
+    padding: 0;
     align-items: center;
   }
   .thumbnail-grid .thumbnail {
     flex-grow: 1;
+    flex-shrink: 1;
   }
   .thumbnail-grid .viewmore {
     left: 0;

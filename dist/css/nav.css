@@ -53,6 +53,8 @@ nav a {
     border-width: 0;
     margin-right: 0;
     margin-bottom: 1ch;
+    text-orientation: unset;
+    writing-mode: unset;
   }
 }
 

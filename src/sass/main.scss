@@ -24,6 +24,12 @@ main {
     flex-grow: 1;
 }
 
+@media screen and (max-width: 600px){
+    .desktop {
+        visibility: hidden;
+    }
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -43,6 +49,10 @@ page {
     padding: 2ch;
     padding-left: 4ch;
     padding-right: 4ch;
+    @media screen and (max-width: 600px){
+        padding-left: 1ch;
+        padding-right: 1ch;
+    }
     color: hsla(100%, 100%, 100%, 88%)
 }
 
