@@ -18,4 +18,41 @@ for (var i = 0; i < grids.length; i++) {
     animator.init();
 }
 ;
+var menuButton = document.querySelector("mobilenav");
+var menu = document.querySelector("nav");
+if (menuButton) {
+    menuButton.onclick = () => {
+        if (!menu)
+            return;
+        menu.classList.toggle("active");
+    };
+}
+var cursorCanvas = document.querySelector(".pixels");
+var pixels = [];
+for (var i = 0; i < 701; i++) {
+    if (!cursorCanvas)
+        break;
+    var child = document.createElement("div");
+    child.classList.add("c" + i.toString());
+    cursorCanvas.appendChild(child);
+    pixels.push(child);
+}
+if (cursorCanvas) {
+    document.body.onmousemove = (event) => {
+        if (!cursorCanvas)
+            return;
+        for (var i = 0; i < pixels.length; i++) {
+            var trailer = pixels[i];
+            if (!trailer)
+                continue;
+            var trailRect = trailer.getBoundingClientRect();
+            if (Math.abs(trailRect.x - event.x) < 60 && Math.abs(trailRect.y - event.y) < 60) {
+                trailer.classList.add("show");
+            }
+            else {
+                trailer.classList.remove("show");
+            }
+        }
+    };
+}
 //# sourceMappingURL=main.js.map

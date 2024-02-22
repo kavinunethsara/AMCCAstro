@@ -1,3 +1,5 @@
+// Backdrop stars
+
 .star-cont{
     position: fixed;
     top: 0;
@@ -115,3 +117,59 @@ $shadows-big:    multiple-box-shadow(100);
   to{
     transform: translateY(-2000px);}
 }
+
+// Pointer stars
+
+.pixels{
+    display: block;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    tab-index: -1;
+    inert: true;
+    pointer-events: none;
+}
+
+.pixels div {
+    display: block;
+    position: absolute;
+    top: 10ch;
+    right: 10ch;
+    background-color: #AAFFFF;
+    border-radius: 100%;
+    opacity: 0;
+    mouse-event: none;
+    animation: 1s infinite alternate blink;
+
+    &.show {
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+        &.show {
+            opacity: 0;
+        }
+    }
+
+    transition: 1s ease-out;
+}
+
+@for $i from 0 through 700{
+    .pixels div.c#{$i} {
+        $size: random(10);
+        height: #{$size}px;
+        width: #{$size}px;
+        top: #{random(100)}vh;
+        right: #{random(100)}vw;
+        animation-delay: #{calc($size / 5)}s;
+    }
+}
+
+@keyframes blink{
+    0% { transform: scale(0.1); }
+    100% { transform: scale(1); }
+}
+
