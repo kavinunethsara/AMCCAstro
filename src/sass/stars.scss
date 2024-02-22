@@ -148,6 +148,8 @@ $shadows-big:    multiple-box-shadow(100);
         opacity: 1;
     }
 
+
+    // Shouldn't be visible on touch. else it would show up when tapping and not disappear automatically
     @media screen and (max-width: 600px) {
         &.show {
             opacity: 0;
@@ -157,6 +159,7 @@ $shadows-big:    multiple-box-shadow(100);
     transition: 1s ease-out;
 }
 
+// Adds random points that appear when the mouse point is near
 @for $i from 0 through 700{
     .pixels div.c#{$i} {
         $size: random(10);

@@ -165,23 +165,29 @@ nav {
   justify-content: center;
   visibility: show;
   z-index: 99998;
-}
-nav a:hover, nav a.active {
-  font-weight: bold;
+  backdrop-filter: blur(0.3ch);
+  border-right: 1px solid rgba(255, 204, 204, 0.3333333333);
 }
 nav a.active {
-  border-color: #e67702;
+  font-weight: bold;
+}
+nav a.active, nav a:hover {
+  color: #e6AA02;
 }
 nav a {
   display: flex;
   color: #e67702;
   text-decoration: none;
-  padding: 2ch;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin: 1ch;
-  margin-right: -1ch;
-  margin-bottom: 3ch;
-  border-bottom: 4px solid transparent;
-  transform: rotateZ(-90deg);
+  padding: 2ch;
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
 }
 @media screen and (max-width: 600px) {
   nav {
@@ -264,6 +270,8 @@ mobilenav {
   position: relative;
   overflow: hidden;
   transition: 0.25s ease-out;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 .grid .card label {
   display: block;
@@ -274,6 +282,24 @@ mobilenav {
   background: linear-gradient(transparent, black);
   padding: 1ch;
   padding-top: 100%;
+}
+.grid .card b {
+  position: relative;
+}
+.grid .card b::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: -0.5ch;
+  width: 0%;
+  border-bottom: 0.2ch solid white;
+  content: "";
+  transition: 0.5s ease-out;
+}
+.grid .card:hover b::after {
+  width: 100%;
+  left: 0%;
 }
 .grid .card:hover {
   transform: scale(105%);

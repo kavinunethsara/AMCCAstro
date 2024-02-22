@@ -29,6 +29,8 @@
         position: relative;
         overflow: hidden;
         transition: 0.25s ease-out;
+        text-decoration: none !important;
+        color: inherit !important;
 
         label{
             display: block;
@@ -39,6 +41,26 @@
             background: linear-gradient(transparent, black);
             padding: 1ch;
             padding-top: 100%;
+
+        }
+
+        b { position: relative; }
+
+        b::after{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            bottom: -0.5ch;
+            width: 0%;
+            border-bottom: 0.2ch solid white;
+            content: "";
+            transition: 0.5s ease-out;
+        }
+
+        &:hover b::after{
+            width: 100%;
+            left: 0%;
         }
 
         &:hover{
