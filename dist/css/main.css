@@ -42,6 +42,11 @@ main {
   flex-grow: 1;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
 page {
   display: flex;
   flex-grow: 1;
@@ -153,6 +158,9 @@ p a:hover::after {
   }
   .hero h3 {
     font-size: 0.9rem;
+  }
+  .hero img {
+    height: 15ch;
   }
 }
 @keyframes bounce {
@@ -405,6 +413,8 @@ mobilenav {
   margin: auto;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .thumbnail-grid .thumbnail {
   display: flex;
@@ -476,6 +486,84 @@ mobilenav {
 .slides::-webkit-scrollbar {
   display: none;
   opacity: 0;
+}
+
+.pillgrid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1ch;
+}
+.pillgrid .pillcard {
+  display: flex;
+  padding: 1ch;
+  background-color: #111111;
+  color: white;
+  border-radius: 0.5ch;
+  border: 1px solid rgba(255, 255, 255, 0.0666666667);
+  box-shadow: 0 0 1ch 0.1ch black;
+  margin: 1ch;
+  transition: 0.4s ease-out;
+}
+.pillgrid .pillcard:hover {
+  filter: saturate(150%);
+  transform: scale(102%);
+}
+@media screen and (max-width: 600px) {
+  .pillgrid {
+    flex-direction: column;
+  }
+}
+
+.bg-dark {
+  background-color: #111111 !important;
+  color: white !important;
+}
+.bg-light {
+  background-color: #FAFAFA !important;
+  color: black !important;
+}
+.bg-green {
+  background-color: #1BC841 !important;
+  color: black !important;
+}
+.bg-blue {
+  background-color: #106CE1 !important;
+  color: black !important;
+}
+.bg-red {
+  background-color: #C81B1B !important;
+  color: black !important;
+}
+.bg-orange {
+  background-color: #C8741B !important;
+  color: black !important;
+}
+.bg-purple {
+  background-color: #A21BC8 !important;
+  color: black !important;
+}
+
+.fg-dark {
+  color: #111111 !important;
+}
+.fg-light {
+  color: #FAFAFA !important;
+}
+.fg-green {
+  color: #1BC841 !important;
+}
+.fg-blue {
+  color: #106CE1 !important;
+}
+.fg-red {
+  color: #C81B1B !important;
+}
+.fg-orange {
+  color: #C8741B !important;
+}
+.fg-purple {
+  color: #A21BC8 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

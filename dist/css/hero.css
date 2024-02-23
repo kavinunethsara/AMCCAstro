@@ -55,6 +55,9 @@
   .hero h3 {
     font-size: 0.9rem;
   }
+  .hero img {
+    height: 15ch;
+  }
 }
 @keyframes bounce {
   0% {

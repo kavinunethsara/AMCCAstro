@@ -1,0 +1,68 @@
+// Generic classes used for behaviour and style modifications
+
+.bg{
+    &-dark {
+        background-color: #111111 !important;
+        color: white !important;
+    }
+
+    &-light {
+        background-color: #FAFAFA !important;
+        color: black !important;
+    }
+
+    &-green {
+        background-color: #1BC841 !important;
+        color: black !important;
+    }
+
+    &-blue {
+        background-color: #106CE1 !important;
+        color: black !important;
+    }
+
+    &-red {
+        background-color: #C81B1B !important;
+        color: black !important;
+    }
+
+    &-orange {
+        background-color: #C8741B !important;
+        color: black !important;
+    }
+
+    &-purple {
+        background-color: #A21BC8 !important;
+        color: black !important;
+    }
+}
+
+.fg{
+    &-dark {
+        color: #111111 !important;
+    }
+
+    &-light {
+        color: #FAFAFA !important;
+    }
+
+    &-green {
+        color: #1BC841 !important;
+    }
+
+    &-blue {
+        color: #106CE1 !important;
+    }
+
+    &-red {
+        color: #C81B1B !important;
+    }
+
+    &-orange {
+        color: #C8741B !important;
+    }
+
+    &-purple {
+        color: #A21BC8 !important;
+    }
+}

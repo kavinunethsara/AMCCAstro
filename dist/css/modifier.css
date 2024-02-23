@@ -1,0 +1,52 @@
+.bg-dark {
+  background-color: #111111 !important;
+  color: white !important;
+}
+.bg-light {
+  background-color: #FAFAFA !important;
+  color: black !important;
+}
+.bg-green {
+  background-color: #1BC841 !important;
+  color: black !important;
+}
+.bg-blue {
+  background-color: #106CE1 !important;
+  color: black !important;
+}
+.bg-red {
+  background-color: #C81B1B !important;
+  color: black !important;
+}
+.bg-orange {
+  background-color: #C8741B !important;
+  color: black !important;
+}
+.bg-purple {
+  background-color: #A21BC8 !important;
+  color: black !important;
+}
+
+.fg-dark {
+  color: #111111 !important;
+}
+.fg-light {
+  color: #FAFAFA !important;
+}
+.fg-green {
+  color: #1BC841 !important;
+}
+.fg-blue {
+  color: #106CE1 !important;
+}
+.fg-red {
+  color: #C81B1B !important;
+}
+.fg-orange {
+  color: #C8741B !important;
+}
+.fg-purple {
+  color: #A21BC8 !important;
+}
+
+/*# sourceMappingURL=modifier.css.map */

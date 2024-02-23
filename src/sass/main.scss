@@ -42,6 +42,11 @@ main {
     flex-grow: 1;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
 page {
     display: flex;
     flex-grow: 1;
@@ -63,3 +68,5 @@ page {
 @import 'cardgrid.scss';
 @import 'thumbnailgrid.scss';
 @import 'slides.scss';
+@import 'pillgrid.scss';
+@import 'modifier.scss';
