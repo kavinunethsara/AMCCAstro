@@ -34,6 +34,7 @@
 
         @media screen and (max-width: 600px){
             min-height: 50%;
+            padding: 0px;
         }
 
         label{
@@ -45,6 +46,10 @@
             background: linear-gradient(transparent, black);
             padding: 1ch;
             padding-top: 100%;
+
+            @media screen and (max-width: 600px) {
+                position: relative;
+            }
 
         }
 

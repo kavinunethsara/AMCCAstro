@@ -18,6 +18,11 @@
   flex-shrink: 0;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .slides .slide {
+    height: auto;
+  }
+}
 .slides::-webkit-scrollbar {
   display: none;
   opacity: 0;

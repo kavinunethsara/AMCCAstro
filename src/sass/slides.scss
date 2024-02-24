@@ -19,6 +19,10 @@
         flex-shrink: 0;
         //scroll-snap-align: start;
         position: relative;
+
+        @media screen and (max-width: 600px) {
+            height: auto;
+        }
     }
 
     &::-webkit-scrollbar {

@@ -46,6 +46,34 @@ main {
   position: absolute;
   bottom: 0;
 }
+@media screen and (max-width: 600px) {
+  .footer {
+    position: relative;
+  }
+}
+
+.orientbanner {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+  color: white;
+  z-index: 999999;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  visibility: hidden;
+}
+@media screen and (max-height: 600px) and (min-aspect-ratio: 1/1) {
+  .orientbanner {
+    visibility: visible;
+  }
+}
 
 page {
   display: flex;
@@ -262,7 +290,7 @@ mobilenav {
   color: white;
   border-radius: 1ch;
   border: 2px solid #FFCCCC;
-  font-size: 24pt;
+  font-size: 24rem;
   font-weight: bold;
   background-color: hsla(0, 0%, 100%, 0.1);
   backdrop-filter: blur(0.5ch);
@@ -311,6 +339,7 @@ mobilenav {
 @media screen and (max-width: 600px) {
   .grid .card {
     min-height: 50%;
+    padding: 0px;
   }
 }
 .grid .card label {
@@ -322,6 +351,11 @@ mobilenav {
   background: linear-gradient(transparent, black);
   padding: 1ch;
   padding-top: 100%;
+}
+@media screen and (max-width: 600px) {
+  .grid .card label {
+    position: relative;
+  }
 }
 .grid .card b {
   position: relative;
@@ -483,6 +517,11 @@ mobilenav {
   flex-shrink: 0;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .slides .slide {
+    height: auto;
+  }
+}
 .slides::-webkit-scrollbar {
   display: none;
   opacity: 0;
@@ -504,10 +543,16 @@ mobilenav {
   box-shadow: 0 0 1ch 0.1ch black;
   margin: 1ch;
   transition: 0.4s ease-out;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .pillgrid .pillcard:hover {
   filter: saturate(150%);
   transform: scale(102%);
+}
+.pillgrid .pillcard .lucide {
+  margin-right: 1ch;
 }
 @media screen and (max-width: 600px) {
   .pillgrid {

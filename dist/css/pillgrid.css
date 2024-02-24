@@ -14,10 +14,16 @@
   box-shadow: 0 0 1ch 0.1ch black;
   margin: 1ch;
   transition: 0.4s ease-out;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .pillgrid .pillcard:hover {
   filter: saturate(150%);
   transform: scale(102%);
+}
+.pillgrid .pillcard .lucide {
+  margin-right: 1ch;
 }
 @media screen and (max-width: 600px) {
   .pillgrid {

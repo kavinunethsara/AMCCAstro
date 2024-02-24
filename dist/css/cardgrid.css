@@ -35,6 +35,7 @@
 @media screen and (max-width: 600px) {
   .grid .card {
     min-height: 50%;
+    padding: 0px;
   }
 }
 .grid .card label {
@@ -46,6 +47,11 @@
   background: linear-gradient(transparent, black);
   padding: 1ch;
   padding-top: 100%;
+}
+@media screen and (max-width: 600px) {
+  .grid .card label {
+    position: relative;
+  }
 }
 .grid .card b {
   position: relative;
