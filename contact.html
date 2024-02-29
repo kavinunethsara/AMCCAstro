@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <title>AMCC Astronomy Society</title>
+  </head>
+  <body>
+    <div class="orientbanner"> Please rotate your device </div>
+    <div class="star-cont">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+    <header></header>
+    <main>
+        <mobilenav></mobilenav>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      <div class="row">
+        <div class="slides">
+          <div class="slide">
+            <form>
+              <h1> Contact Us </h1>
+              <div class="row mobile-column" style="flex-grow:0;">
+                <div class="input-group">
+                  <label class="label" for="email">E Mail</label>
+                  <input type="text" id="email" name="email" class="input" />
+                </div>
+
+                <div class="input-group">
+                  <label class="label" for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" class="input"/>
+                </div>
+              </div>
+              <div class="input-group textarea">
+                <textarea id="body" name="body" class="input"></textarea>
+              </div>
+
+              <button class="submit"> Send </button>
+            </from>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <div class="pixels" inert tab-index=-1>
+    </div>
+
+    <script src="dist/js/main.js" type="module"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

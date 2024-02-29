@@ -49,4 +49,49 @@
   color: #A21BC8 !important;
 }
 
+@media screen and (max-width: 600px) {
+  .desktop {
+    visibility: hidden;
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+@media screen and (max-width: 600px) {
+  .row.mobile-column {
+    flex-direction: column;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media screen and (max-width: 600px) {
+  .column.mobile-row {
+    flex-direction: row;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    position: relative;
+  }
+}
+
+.center-children {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
 /*# sourceMappingURL=modifier.css.map */

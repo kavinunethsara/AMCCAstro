@@ -66,3 +66,50 @@
         color: #A21BC8 !important;
     }
 }
+
+@media screen and (max-width: 600px){
+    .desktop {
+        visibility: hidden;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    &.mobile-column {
+        @media screen and (max-width: 600px){
+        flex-direction: column;
+        }
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &.mobile-row {
+        @media screen and (max-width: 600px){
+        flex-direction: row;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+
+    @media screen and (max-width: 600px){
+        position: relative;
+    }
+}
+
+.center-children {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}

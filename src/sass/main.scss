@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
 body {
     display: flex;
     padding: 0px;
@@ -22,33 +29,6 @@ html {
 main {
     display: flex;
     flex-grow: 1;
-}
-
-@media screen and (max-width: 600px){
-    .desktop {
-        visibility: hidden;
-    }
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-
-    @media screen and (max-width: 600px){
-        position: relative;
-    }
 }
 
 .orientbanner {
@@ -95,4 +75,6 @@ page {
 @import 'thumbnailgrid.scss';
 @import 'slides.scss';
 @import 'pillgrid.scss';
+@import 'input.scss';
+@import 'article.scss';
 @import 'modifier.scss';
