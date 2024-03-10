@@ -1,5 +1,7 @@
 import anime from './anime.es.js'
 import { ScrollAnimator } from './animations.js';
+import { Cursor } from './cursor.js';
+// import {  }
 
 var grids: NodeListOf<Element> = document.querySelectorAll(".grid");
 var animator: ScrollAnimator = new ScrollAnimator([]);
@@ -33,27 +35,4 @@ if (menuButton) {
 }
 
 var cursorCanvas: HTMLElement | null = document.querySelector(".pixels");
-var pixels: Array<HTMLElement> = [];
-for (var i = 0; i < 701; i++) {
-    if (!cursorCanvas) break;
-    var child: HTMLDivElement = document.createElement("div");
-    child.classList.add("c" + i.toString());
-    cursorCanvas.appendChild(child);
-    pixels.push(child);
-}
-
-if (cursorCanvas) {
-    document.body.onmousemove = (event) => {
-        if (!cursorCanvas) return;
-        for (var i = 0; i < pixels.length; i++) {
-            var trailer = pixels[i];
-            if (!trailer) continue;
-            var trailRect = trailer.getBoundingClientRect();
-            if (Math.abs(trailRect.x - event.x) < 60 && Math.abs(trailRect.y - event.y) < 60) {
-                trailer.classList.add("show");
-            } else {
-                trailer.classList.remove("show");
-            }
-        }
-    }
-}
+var cursorHandler: Cursor = new Cursor(cursorCanvas);
