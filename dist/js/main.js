@@ -5,6 +5,8 @@ var grids = document.querySelectorAll(".grid");
 var animator = new ScrollAnimator([]);
 for (var i = 0; i < grids.length; i++) {
     var grid = grids[i];
+    if (grid.classList.contains("noanimation"))
+        continue;
     var anim = anime({
         targets: '#' + grid.id + ' .card',
         margin: ['10ch', 0],

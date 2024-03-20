@@ -72,7 +72,7 @@ page {
 
 @font-face {
   font-family: "Orbitron";
-  src: url(../../static/fonts/Orbitron/Orbitron.ttf);
+  src: url(/assets/fonts/Orbitron/Orbitron.ttf);
 }
 body {
   font-family: "Orbitron", helvetica, sans-serif;
@@ -692,6 +692,8 @@ article {
   border-radius: 1ch;
   position: relative;
   background-size: cover;
+  background-position: center;
+  min-height: 50%;
 }
 .article-head * {
   z-index: 1;

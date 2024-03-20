@@ -38,6 +38,8 @@ article {
     border-radius: 1ch;
     position: relative;
     background-size: cover;
+    background-position: center;
+    min-height: 50%;
 
     * {
         z-index: 1;

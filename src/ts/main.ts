@@ -8,6 +8,7 @@ var animator: ScrollAnimator = new ScrollAnimator([]);
 
 for (var i = 0; i < grids.length; i++) {
     var grid: Element = grids[i];
+    if (grid.classList.contains("noanimation")) continue;
     var anim: any = anime({
         targets: '#' + grid.id + ' .card',
         margin: ['10ch', 0],
