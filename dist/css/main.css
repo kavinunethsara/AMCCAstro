@@ -32,26 +32,7 @@ main {
 }
 
 .orientbanner {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-  background-color: black;
-  color: white;
-  z-index: 999999;
-  text-align: center;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
-  visibility: hidden;
-}
-@media screen and (max-height: 600px) and (min-aspect-ratio: 1/1) {
-  .orientbanner {
-    visibility: visible;
-  }
+  display: none;
 }
 
 page {
@@ -72,7 +53,7 @@ page {
 
 @font-face {
   font-family: "Orbitron";
-  src: url(/assets/fonts/Orbitron/Orbitron.ttf);
+  src: url(/static/fonts/Orbitron/Orbitron.ttf);
 }
 body {
   font-family: "Orbitron", helvetica, sans-serif;
@@ -153,7 +134,7 @@ p a:hover::after {
   transform: rotateZ(-45deg);
   animation: bounce 1s ease-in infinite, hide 10s linear infinite;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 919px) {
   .hero {
     text-align: center;
   }
@@ -229,7 +210,7 @@ nav a {
   text-orientation: mixed;
   writing-mode: vertical-rl;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
   nav {
     display: flex;
     position: fixed;
@@ -275,7 +256,7 @@ mobilenav {
   backdrop-filter: blur(0.5ch);
   z-index: 99999;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
   mobilenav {
     display: flex;
   }
@@ -293,7 +274,7 @@ mobilenav {
   padding-right: 0ch;
   margin-bottom: 2ch;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .grid {
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -314,6 +295,10 @@ mobilenav {
   transition: 0.25s ease-out;
   text-decoration: none !important;
   color: inherit !important;
+  min-width: 300px;
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 600px) {
   .grid .card {
@@ -427,6 +412,7 @@ mobilenav {
   flex-direction: row;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .thumbnail-grid .thumbnail {
@@ -491,7 +477,7 @@ mobilenav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   flex-shrink: 0;
   position: relative;

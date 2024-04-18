@@ -10,7 +10,7 @@
   padding-right: 0ch;
   margin-bottom: 2ch;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .grid {
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -31,6 +31,10 @@
   transition: 0.25s ease-out;
   text-decoration: none !important;
   color: inherit !important;
+  min-width: 300px;
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 600px) {
   .grid .card {

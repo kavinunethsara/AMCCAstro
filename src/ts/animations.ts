@@ -21,11 +21,10 @@ export class ScrollAnimator {
 
     callback = () => {
         this.animations.forEach((anim) => {
-            var grid = anim.grid;
-            var slide = grid.closest('.slide');
-            var offset = -slide.getBoundingClientRect().y + slide.scrollHeight;
+            var container = anim.container
+            var offset = -container.getBoundingClientRect().y - container.scrollTop + container.scrollHeight;
             offset = (offset < 0) ? 0 : offset;
-            var scrollPercent = offset / (slide.scrollHeight) * 100;
+            var scrollPercent = offset / (container.scrollHeight) * 100;
             anim.seek((scrollPercent / 100) * anim.duration);
         });
     }
@@ -33,5 +32,6 @@ export class ScrollAnimator {
     init = () => {
         if (!this.#slidecontainter) return;
         this.#slidecontainter.onscroll = this.callback.bind(this);
+        this.callback();
     }
 }

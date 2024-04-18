@@ -23,11 +23,10 @@ export class ScrollAnimator {
         };
         this.callback = () => {
             this.animations.forEach((anim) => {
-                var grid = anim.grid;
-                var slide = grid.closest('.slide');
-                var offset = -slide.getBoundingClientRect().y + slide.scrollHeight;
+                var container = anim.container;
+                var offset = -container.getBoundingClientRect().y - container.scrollTop + container.scrollHeight;
                 offset = (offset < 0) ? 0 : offset;
-                var scrollPercent = offset / (slide.scrollHeight) * 100;
+                var scrollPercent = offset / (container.scrollHeight) * 100;
                 anim.seek((scrollPercent / 100) * anim.duration);
             });
         };
@@ -35,6 +34,7 @@ export class ScrollAnimator {
             if (!__classPrivateFieldGet(this, _ScrollAnimator_slidecontainter, "f"))
                 return;
             __classPrivateFieldGet(this, _ScrollAnimator_slidecontainter, "f").onscroll = this.callback.bind(this);
+            this.callback();
         };
         this.animations = anims;
         __classPrivateFieldSet(this, _ScrollAnimator_slidecontainter, document.querySelector(".slides"), "f");

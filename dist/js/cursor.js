@@ -3,7 +3,7 @@ export class Cursor {
         this.cursorCanvas = document.body;
         this.pixels = [];
         this.drawCursor = (x, y) => {
-            if (window.matchMedia("screen and (max-width: 600px)").matches) {
+            if (window.matchMedia("screen and (max-width: 600px)").matches || window.matchMedia("@media screen and (max-height: 575.98px) and (orientation: landscape)").matches) {
                 return;
             }
             if (!this.cursorCanvas)

@@ -31,27 +31,29 @@ main {
     flex-grow: 1;
 }
 
-.orientbanner {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: black;
-    color: white;
-    z-index: 999999;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 10rem;
-    visibility: hidden;
+// .orientbanner {
+//     display: flex;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100dvw;
+//     height: 100dvh;
+//     background-color: black;
+//     color: white;
+//     z-index: 999999;
+//     text-align: center;
+//     align-content: center;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 10rem;
+//     visibility: hidden;
+//
+//     @media screen and ( max-height: 600px ) and ( min-aspect-ratio: 1/1 ) {
+//         visibility: visible;
+//     }
+// }
 
-    @media screen and ( max-height: 600px ) and ( min-aspect-ratio: 1/1 ) {
-        visibility: visible;
-    }
-}
+.orientbanner { display: none; }
 
 page {
     display: flex;

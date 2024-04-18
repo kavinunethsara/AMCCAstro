@@ -31,7 +31,7 @@ nav {
         writing-mode: vertical-rl;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px), screen and (max-height: 600px) {
         & {
             display: flex;
             position: fixed;
@@ -68,7 +68,7 @@ nav {
 mobilenav{
     display: none;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) , screen and (max-height: 600px) {
         & { display: flex; }
     }
 

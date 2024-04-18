@@ -15,7 +15,7 @@ export class Cursor {
     }
 
     drawCursor = (x: number, y: number) => {
-        if (window.matchMedia("screen and (max-width: 600px)").matches) {
+        if (window.matchMedia("screen and (max-width: 600px)").matches || window.matchMedia("@media screen and (max-height: 575.98px) and (orientation: landscape)").matches) {
             return;
         }
 

@@ -28,7 +28,7 @@ nav a {
   text-orientation: mixed;
   writing-mode: vertical-rl;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
   nav {
     display: flex;
     position: fixed;
@@ -74,7 +74,7 @@ mobilenav {
   backdrop-filter: blur(0.5ch);
   z-index: 99999;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
   mobilenav {
     display: flex;
   }
