@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Orbitron";
-  src: url(/static/fonts/Orbitron/Orbitron.ttf);
+  src: url(../../static/fonts/Orbitron/Orbitron.ttf);
 }
 body {
   font-family: "Orbitron", helvetica, sans-serif;
