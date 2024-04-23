@@ -90,6 +90,14 @@ p a:hover::after {
   left: 0%;
 }
 
+blockquote {
+  border-left: 0.2rem solid dodgerblue;
+  padding: 2rem;
+  margin: 0;
+  background-color: rgba(30, 144, 255, 0.1098039216);
+  background: linear-gradient(90deg, rgba(30, 144, 255, 0.1098039216), transparent);
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -652,11 +660,12 @@ article {
   padding: 2ch;
   width: 100%;
   max-width: 70ch;
+  min-height: 100%;
+  height: fit-content;
   border-radius: 1ch;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #080808;
-  overflow-y: scroll;
 }
 @media screen and (max-width: 600px) {
   article {
@@ -757,6 +766,7 @@ article {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  overflow: auto;
 }
 @media screen and (max-width: 600px) {
   .row.mobile-column {
@@ -768,6 +778,7 @@ article {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow: auto;
 }
 @media screen and (max-width: 600px) {
   .column.mobile-row {

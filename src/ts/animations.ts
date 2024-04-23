@@ -1,12 +1,16 @@
-/*
- * Manages scroll based animations.
+/**
+ * Manages and activates scroll based animations.
  */
 export class ScrollAnimator {
     animations: Array<any> = [];
     #slidecontainter: HTMLElement | null;
 
-    constructor(anims: Array<any>) {
-        this.animations = anims;
+    /**
+     * @constructs
+     * @param {Array<any>} animations - List of animations to handle
+     */
+    constructor(animations: Array<any>) {
+        this.animations = animations;
         this.#slidecontainter = document.querySelector(".slides");
     }
 

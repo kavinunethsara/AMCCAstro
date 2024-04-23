@@ -8,11 +8,12 @@ article {
   padding: 2ch;
   width: 100%;
   max-width: 70ch;
+  min-height: 100%;
+  height: fit-content;
   border-radius: 1ch;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #080808;
-  overflow-y: scroll;
 }
 @media screen and (max-width: 600px) {
   article {

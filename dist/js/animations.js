@@ -11,7 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 };
 var _ScrollAnimator_slidecontainter;
 export class ScrollAnimator {
-    constructor(anims) {
+    constructor(animations) {
         this.animations = [];
         _ScrollAnimator_slidecontainter.set(this, void 0);
         this.add = (anim) => {
@@ -36,7 +36,7 @@ export class ScrollAnimator {
             __classPrivateFieldGet(this, _ScrollAnimator_slidecontainter, "f").onscroll = this.callback.bind(this);
             this.callback();
         };
-        this.animations = anims;
+        this.animations = animations;
         __classPrivateFieldSet(this, _ScrollAnimator_slidecontainter, document.querySelector(".slides"), "f");
     }
 }
