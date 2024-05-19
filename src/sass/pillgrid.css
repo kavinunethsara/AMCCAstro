@@ -1,0 +1,34 @@
+.pillgrid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1ch;
+}
+.pillgrid .pillcard {
+  display: flex;
+  padding: 1ch;
+  background-color: #111111;
+  color: white;
+  border-radius: 0.5ch;
+  border: 1px solid rgba(255, 255, 255, 0.0666666667);
+  box-shadow: 0 0 1ch 0.1ch black;
+  margin: 1ch;
+  transition: 0.4s ease-out;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.pillgrid .pillcard:hover {
+  filter: saturate(150%);
+  transform: scale(102%);
+}
+.pillgrid .pillcard .lucide {
+  margin-right: 1ch;
+}
+@media screen and (max-width: 600px) {
+  .pillgrid {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=pillgrid.css.map */
