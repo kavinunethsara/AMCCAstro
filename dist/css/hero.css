@@ -8,26 +8,31 @@
   height: 100vh;
   position: relative;
 }
+
 .hero h1 {
   display: flex;
   font-size: 3rem;
   margin: 0.5rem;
   word-wrap: break-word;
 }
+
 .hero h2 {
   margin: 0.5rem;
   font-weight: normal;
   font-size: 2rem;
   word-wrap: break-word;
 }
+
 .hero h3 {
   word-wrap: break-word;
 }
+
 .hero img {
   display: flex;
   height: 20ch;
   filter: invert(100%);
 }
+
 .hero::after {
   display: box;
   content: "";
@@ -42,6 +47,7 @@
   transform: rotateZ(-45deg);
   animation: bounce 1s ease-in infinite, hide 10s linear infinite;
 }
+
 @media screen and (max-width: 919px) {
   .hero {
     text-align: center;
@@ -87,5 +93,6 @@
     opacity: 0.65;
   }
 }
+
 
 /*# sourceMappingURL=hero.css.map */

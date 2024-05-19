@@ -17,11 +17,7 @@
         justify-content: center;
         align-content: center;
         align-items: center;
-
-        &:hover {
-            filter: saturate(150%);
-            transform: scale(102%);
-        }
+        text-decoration: none !important;
 
         .lucide {
             margin-right: 1ch;

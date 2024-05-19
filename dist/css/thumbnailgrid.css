@@ -16,6 +16,8 @@
   margin: 1ch;
   height: 25ch;
   width: 25ch;
+  background-size: cover;
+  background-position: center;
 }
 .thumbnail-grid .viewmore {
   display: flex;

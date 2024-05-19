@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Orbitron";
-  src: url(../../static/fonts/Orbitron/Orbitron.ttf);
+  src: url(../../assets/fonts/Orbitron/Orbitron.ttf);
 }
 body {
   font-family: "Orbitron", helvetica, sans-serif;
@@ -17,6 +17,7 @@ p a {
   font-weight: bold;
   position: relative;
 }
+
 p a::after {
   display: block;
   position: absolute;
@@ -28,10 +29,12 @@ p a::after {
   content: "";
   transition: 0.25s ease-out;
 }
+
 p a:hover {
   color: #ffd000;
   border: 0px;
 }
+
 p a:hover::after {
   width: 100%;
   left: 0%;
@@ -44,5 +47,7 @@ blockquote {
   background-color: rgba(30, 144, 255, 0.1098039216);
   background: linear-gradient(90deg, rgba(30, 144, 255, 0.1098039216), transparent);
 }
+
+
 
 /*# sourceMappingURL=typography.css.map */

@@ -8,7 +8,7 @@ article {
   padding: 2ch;
   width: 100%;
   max-width: 70ch;
-  min-height: 100%;
+  min-height: 100dvh;
   height: fit-content;
   border-radius: 1ch;
   border-bottom-left-radius: 0;

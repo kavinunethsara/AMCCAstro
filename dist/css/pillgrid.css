@@ -17,10 +17,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-.pillgrid .pillcard:hover {
-  filter: saturate(150%);
-  transform: scale(102%);
+  text-decoration: none !important;
 }
 .pillgrid .pillcard .lucide {
   margin-right: 1ch;

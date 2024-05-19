@@ -14,9 +14,11 @@ form {
   flex-direction: column;
   box-shadow: 0ch 0ch 5ch 1ch black;
 }
+
 form h1, form h2, form h3, form h4, form h5, form h6, form p {
   margin: 1ch;
 }
+
 @media screen and (max-width: 600px) {
   form {
     background-color: #080808;
@@ -29,7 +31,6 @@ form h1, form h2, form h3, form h4, form h5, form h6, form p {
     background-image: none;
   }
 }
-
 .input-group {
   display: flex;
   width: 100%;
@@ -38,9 +39,11 @@ form h1, form h2, form h3, form h4, form h5, form h6, form p {
   z-index: 2;
   margin: 1ch;
 }
+
 .input-group.textarea {
   max-width: unset;
 }
+
 @supports (mix-blend-mode: darken) {
   .input-group {
     position: relative;
@@ -62,6 +65,7 @@ form h1, form h2, form h3, form h4, form h5, form h6, form p {
   cursor: pointer;
   font-weight: bold;
 }
+
 .input-group .input {
   color: #fff;
   font-size: 1rem;
@@ -78,13 +82,16 @@ form h1, form h2, form h3, form h4, form h5, form h6, form p {
   background-size: 200% 100%;
   transition: background-position 0.8s ease-out;
 }
+
 .input-group .input:hover {
   background-position: 100% 0;
 }
+
 .input-group .input:focus {
   outline: 2px dashed #ad2b89;
   outline-offset: 0.5em;
 }
+
 .input-group textarea.input {
   resize: vertical;
   max-width: 100%;
@@ -110,9 +117,12 @@ form h1, form h2, form h3, form h4, form h5, form h6, form p {
   border: none;
   font-weight: bold;
 }
+
 .submit:focus {
   outline: 2px dashed #ad2b89;
   outline-offset: 0.5em;
 }
+
+
 
 /*# sourceMappingURL=input.css.map */
