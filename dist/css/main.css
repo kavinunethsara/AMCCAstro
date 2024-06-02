@@ -260,7 +260,7 @@ mobilenav {
   border: 2px solid #FFCCCC;
   font-size: 2rem;
   font-weight: bold;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: rgba(47, 9, 6, 0.1450980392);
   backdrop-filter: blur(0.5ch);
   z-index: 99999;
 }
@@ -670,7 +670,9 @@ article {
   border-radius: 1ch;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #080808;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 0;
+  background-color: #2f0906;
 }
 @media screen and (max-width: 600px) {
   article {
@@ -707,10 +709,23 @@ article {
   left: 0;
   bottom: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.5215686275);
+  background-color: rgba(47, 9, 6, 0.5215686275);
   backdrop-filter: blur(0.25ch);
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 2ch;
+}
+
+.bg-default {
+  background-color: #2f0906 !important;
+  color: white !important;
+}
 .bg-dark {
   background-color: #111111 !important;
   color: white !important;

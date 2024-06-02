@@ -1,6 +1,11 @@
 // Generic classes used for behaviour and style modifications
 
 .bg{
+    &-default {
+        background-color: #2f0906 !important;
+        color: white !important;
+    }
+
     &-dark {
         background-color: #111111 !important;
         color: white !important;

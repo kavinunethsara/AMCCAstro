@@ -70,7 +70,7 @@ mobilenav {
   border: 2px solid #FFCCCC;
   font-size: 2rem;
   font-weight: bold;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: rgba(47, 9, 6, 0.1450980392);
   backdrop-filter: blur(0.5ch);
   z-index: 99999;
 }
