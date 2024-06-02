@@ -108,10 +108,21 @@ blockquote {
   height: 100vh;
   position: relative;
 }
+.hero * {
+  animation: appear-inverse 0.75s ease-in-out;
+}
 .hero h1 {
   display: flex;
-  font-size: 3rem;
   margin: 0.5rem;
+  margin-top: 1em;
+  padding: 0.25ch;
+  padding-left: 0.4ch;
+  padding-right: 0.4ch;
+  border-radius: 0.25ch;
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+  font-size: 3rem;
   word-wrap: break-word;
 }
 .hero h2 {
@@ -127,6 +138,27 @@ blockquote {
   display: flex;
   height: 20ch;
   filter: invert(100%);
+  animation: appear 0.75s ease-in-out;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(8pt);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes appear-inverse {
+  0% {
+    opacity: 0;
+    transform: translateY(-8pt);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 .hero::after {
   display: box;
