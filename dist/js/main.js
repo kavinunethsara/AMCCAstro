@@ -32,10 +32,11 @@ var backgroundAnim = anime({
 });
 backgroundAnim.container = document.querySelector(".slides");
 animator.animations.push(backgroundAnim);
-var menuButton = document.querySelector("mobilenav");
+var mobileMenuButton = document.querySelector("mobilenav");
+var desktopMenuButton = document.querySelector("#menu");
 var menu = document.querySelector("nav");
-if (menuButton) {
-    menuButton.onclick = () => {
+if (mobileMenuButton && desktopMenuButton) {
+    desktopMenuButton.onclick = mobileMenuButton.onclick = () => {
         if (!menu)
             return;
         menu.classList.toggle("active");

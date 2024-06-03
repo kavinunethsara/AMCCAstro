@@ -85,8 +85,16 @@
     overflow: auto;
 
     &.mobile-column {
-        @media screen and (max-width: 600px){
-        flex-direction: column;
+        &:not(.bp\:800){
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+            }
+        }
+
+        &.bp\:800{
+            @media screen and (max-width: 800px){
+                flex-direction: column;
+            }
         }
     }
 }
@@ -98,9 +106,24 @@
     overflow: auto;
 
     &.mobile-row {
-        @media screen and (max-width: 600px){
-        flex-direction: row;
+        &:not(.bp800){
+            @media screen and (max-width: 600px){
+                flex-direction: row;
+            }
         }
+
+        .bp800{
+            @media screen and (max-width: 800px){
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.sizing{
+    &\:fit {
+        width: fit-content;
+        flex-grow: 0;
     }
 }
 
@@ -119,4 +142,27 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
+}
+
+.center-children\:ismobile {
+
+    &:not(.bp\:800){
+        @media screen and (max-width: 600px){
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+
+    &.bp\:800 {
+        @media screen and (max-width: 800px){
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
 }

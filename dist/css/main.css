@@ -113,6 +113,8 @@ blockquote {
 }
 .hero h1 {
   display: flex;
+  flex-grow: 0;
+  width: fit-content;
   margin: 0.5rem;
   margin-top: 1em;
   padding: 0.25ch;
@@ -130,9 +132,14 @@ blockquote {
   font-weight: normal;
   font-size: 2rem;
   word-wrap: break-word;
+  flex-grow: 0;
+  width: fit-content;
 }
 .hero h3 {
+  flex-grow: 0;
+  width: fit-content;
   word-wrap: break-word;
+  margin: 0.5rem;
 }
 .hero img {
   display: flex;
@@ -235,6 +242,9 @@ nav a.active {
 nav a.active, nav a:hover {
   color: #e6AA02;
 }
+nav a.passive {
+  display: none;
+}
 nav a {
   display: flex;
   color: #e67702;
@@ -259,25 +269,58 @@ nav a {
     left: 0;
     right: 0;
     align-items: center;
-    background-color: rgba(70, 0, 0, 0.5647058824);
-    backdrop-filter: blur(2ch);
+    backdrop-filter: blur(0);
+    background-color: #460000;
     opacity: 0;
+    flex-direction: column !important;
     visibility: hidden;
     transition: 0.25s ease-in-out;
   }
-  nav.active {
-    visibility: visible;
-    opacity: 1;
+  nav #menu {
+    display: none;
   }
-  nav a {
-    transform: rotatez(0);
-    color: white;
-    border-width: 0;
-    margin-right: 0;
-    margin-bottom: 1ch;
-    text-orientation: unset;
-    writing-mode: unset;
-  }
+}
+nav .visible\:oninactive {
+  display: flex;
+}
+nav .visible\:onactive {
+  display: none;
+}
+nav.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  background-color: #460000;
+  backdrop-filter: blur(0);
+  flex-direction: row;
+  flex-wrap: wrap;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+nav.active a {
+  transform: rotatez(0);
+  color: white;
+  border-width: 0;
+  text-orientation: unset;
+  writing-mode: unset;
+}
+nav.active a.passive {
+  display: flex;
+}
+nav.active a:hover {
+  background-color: maroon;
+  border-radius: 1ch;
+}
+nav.active .visible\:oninactive {
+  display: none;
+}
+nav.active .visible\:onactive {
+  display: flex;
 }
 
 mobilenav {
@@ -821,7 +864,12 @@ article {
   overflow: auto;
 }
 @media screen and (max-width: 600px) {
-  .row.mobile-column {
+  .row.mobile-column:not(.bp\:800) {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  .row.mobile-column.bp\:800 {
     flex-direction: column;
   }
 }
@@ -833,9 +881,19 @@ article {
   overflow: auto;
 }
 @media screen and (max-width: 600px) {
-  .column.mobile-row {
+  .column.mobile-row:not(.bp800) {
     flex-direction: row;
   }
+}
+@media screen and (max-width: 800px) {
+  .column.mobile-row .bp800 {
+    flex-direction: row;
+  }
+}
+
+.sizing\:fit {
+  width: fit-content;
+  flex-grow: 0;
 }
 
 .footer {
@@ -854,6 +912,25 @@ article {
   justify-content: center;
   align-items: center;
   justify-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .center-children\:ismobile:not(.bp\:800) {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .center-children\:ismobile.bp\:800 {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

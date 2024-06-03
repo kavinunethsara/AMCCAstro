@@ -15,6 +15,10 @@ nav {
         color: #e6AA02;
     }
 
+    a.passive {
+        display: none;
+    }
+
     a {
         display: flex;
         color: #e67702;
@@ -40,27 +44,69 @@ nav {
             left: 0;
             right: 0;
             align-items: center;
-            background-color: #46000090;
-            backdrop-filter: blur(2ch);
+            backdrop-filter: blur(0);
+            background-color: #460000;
             opacity: 0;
+            flex-direction: column !important;
 
             visibility: hidden;
             transition: 0.25s ease-in-out;
-        }
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
+            #menu {
+                display: none;
+            }
         }
+    }
+
+    .visible\:oninactive {
+        display: flex;
+    }
+
+    .visible\:onactive {
+        display: none;
+    }
+
+    &.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        background-color: #460000;
+        backdrop-filter: blur(0);
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        visibility: visible;
+        opacity: 1;
+
+        transition: 0.25s ease-in-out;
 
         a{
             transform: rotatez(0);
             color: white;
             border-width: 0;
-            margin-right: 0;
-            margin-bottom: 1ch;
             text-orientation: unset;
             writing-mode: unset;
+
+            &.passive {
+                display: flex;
+            }
+
+            &:hover {
+                background-color: maroon;
+                border-radius: 1ch;
+            }
+        }
+
+        .visible\:oninactive {
+            display: none;
+        }
+
+        .visible\:onactive {
+            display: flex;
         }
     }
 }
